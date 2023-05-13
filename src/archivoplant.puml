@@ -1,13 +1,14 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
+(+solicitud hecha )<<sacar dinero>>
+(" ")<<retener tarjeta>>
 
-actor ciudadano
-actor ciudadano2
+note as N1
+condición:
+{historia sospechosa} punto de extensión:
+solicitud hecha
+end note
 
-ciudadano2 --> ciudadano
-ciudadano -- (registrar entrada)
-ciudadano2 -- (tomar huellas)
-(tomar huellas) .> (registrar entrada) : extend
 @enduml
 <.>
