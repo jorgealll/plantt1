@@ -1,6 +1,12 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-(pagar con tarjeta) -->(pagar)
-(pagar en efectivo) -->(pagar)
+actor cliente
+
+cliente --> (meter dinero)
+cliente --> (pedir azucar)
+cliente --> (pedir producto)
+cliente --> (cancelar)
+(pedir producto) .> (devolver dinero) : include
+(cancelar) .> (devolver dinero) : include
 @enduml
