@@ -1,17 +1,5 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-left to right direction
-skinparam packageStyle rectangle
-actor customer
-
-
-  customer -- (confirmar pedido)
-  customer -- (cancelar pedido)
-(confirmar pedido) .> (devolver cambio) : include
-(cancelar pedido) .> (devolver cambio) : include
-
+(acceder) <.. (registrarse) : <<extends>>
 @enduml
-
-(confirmar pedido) .> (devolver cambio) : include
-(cancelar pedido) .> (devolver cambio) : include
