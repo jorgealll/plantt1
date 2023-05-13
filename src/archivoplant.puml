@@ -1,11 +1,22 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+left to right direction
+actor "cliente" as fc
+rectangle  {
+  usecase "mostrar menu" as UC1
+  usecase "pedir comida" as UC2
+}
+fc --> UC1
+fc --> UC2
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+left to right direction
+actor "restaurante" as rs
+rectangle  {
+  usecase "mostrar menu" as UC1
+}
+rs -- (entregar comida)
+rs --> UC1
+
 @enduml
