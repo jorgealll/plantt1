@@ -1,22 +1,17 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-
 left to right direction
-actor "cliente" as fc
-rectangle  {
-  usecase "mostrar menu" as UC1
-  usecase "pedir comida" as UC2
-}
-fc --> UC1
-fc --> UC2
+skinparam packageStyle rectangle
+actor customer
 
-left to right direction
-actor "restaurante" as rs
-rectangle  {
-  usecase "mostrar menu" as UC1
-}
-rs -- (entregar comida)
-rs --> UC1
+
+  customer -- (confirmar pedido)
+  customer -- (cancelar pedido)
+(confirmar pedido) .> (devolver cambio) : include
+(cancelar pedido) .> (devolver cambio) : include
 
 @enduml
+
+(confirmar pedido) .> (devolver cambio) : include
+(cancelar pedido) .> (devolver cambio) : include
