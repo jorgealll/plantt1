@@ -1,12 +1,14 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
+
 actor cliente
 
-cliente --> (meter dinero)
-cliente --> (pedir azucar)
-cliente --> (pedir producto)
-cliente --> (cancelar)
-(pedir producto) .> (devolver dinero) : include
-(cancelar) .> (devolver dinero) : include
+cliente -- (identificarse)
+cliente -- (pagar)
+cliente -- (elegir mensajero)
+cliente -- (confirmar)
+(identificarse) <. (registrarse) : extend
+(pagar)<- (pagar con tarjeta)
+(pagar)<- (pagar con transferencia)
 @enduml
