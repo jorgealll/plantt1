@@ -1,5 +1,6 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-(acceder) <.. (registrarse) : <<extends>>
+(pagar con tarjeta) -->(pagar)
+(pagar en efectivo) -->(pagar)
 @enduml
