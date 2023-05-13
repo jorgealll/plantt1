@@ -2,13 +2,12 @@
 'https://plantuml.com/sequence-diagram
 
 
-actor cliente
+actor ciudadano
+actor ciudadano2
 
-cliente -- (identificarse)
-cliente -- (pagar)
-cliente -- (elegir mensajero)
-cliente -- (confirmar)
-(identificarse) <. (registrarse) : extend
-(pagar)<- (pagar con tarjeta)
-(pagar)<- (pagar con transferencia)
+ciudadano2 --> ciudadano
+ciudadano -- (registrar entrada)
+ciudadano2 -- (tomar huellas)
+(tomar huellas) .> (registrar entrada) : extend
 @enduml
+<.>
